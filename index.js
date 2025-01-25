@@ -34,3 +34,7 @@
 //   ensuring that there is only one set of branch information throughout the application.
 
 let bankBranchInstance = null;
+
+class BankBranch {
+    
+}
