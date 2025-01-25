@@ -33,6 +33,7 @@
 // - We demonstrate the Singleton pattern by creating two instances (`branchA` and `branchB`) and show that they both point to the same instance,
 //   ensuring that there is only one set of branch information throughout the application.
 
+
 let bankBranchInstance = null;
 
 class BankBranch {
@@ -41,5 +42,16 @@ class BankBranch {
             this.branchInfo = branchInfo;
             bankBranchInstance = this;
         } return  bankBranchInstance;
+    } 
+    getBranchInfo() {
+        return this.branchInfo;
     }
-}
+} 
+
+const branchA = new BankBranch("Durban FNB Branch");
+console.log(branchA.getBranchInfo());
+
+const branchB = new BankBranch("Gauteng FNB Branch");
+console.log(branchB.getBranchInfo());
+console.log(branchA === branchB);
+ 
